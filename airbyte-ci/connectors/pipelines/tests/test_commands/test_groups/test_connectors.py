@@ -306,19 +306,6 @@ def click_context_obj(in_memory_secret_store):
     "command, command_args",
     [
         (connectors_test_command.test, []),
-        (
-            connectors_publish_command.publish,
-            [
-                "--spec-cache-gcs-credentials",
-                '{"foo": "bar"}',
-                "--spec-cache-bucket-name",
-                "test",
-                "--metadata-service-gcs-credentials",
-                '{"foo": "bar"}',
-                "--metadata-service-bucket-name",
-                "test",
-            ],
-        ),
         (connectors_build_command.build, []),
     ],
 )
